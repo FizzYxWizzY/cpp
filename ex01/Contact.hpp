@@ -1,0 +1,46 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/15 02:18:06 by mflury            #+#    #+#             */
+/*   Updated: 2024/04/15 05:12:35 by mflury           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
+
+#include <iostream>
+#include <string>
+
+class Contact {
+private:
+    // Private member variables
+    std::string _firstName;
+	std::string _lastName;
+
+public:
+    // Constructor
+    Contact(
+		const std::string &firstName = "",
+		const std::string &lastName = ""
+	);
+
+    // Destructor
+    ~Contact();
+
+    // Member function declarations
+    // void memberFunction1();
+    // void memberFunction2(int parameter);
+    
+    // Getter and setter for private variable
+    void setFirstName(std::string firstName);
+    std::string getFirstName() const;
+	void setLastName(std::string lastName);
+    std::string getLastName() const;
+};
+
+#endif
