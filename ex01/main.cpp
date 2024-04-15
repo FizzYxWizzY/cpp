@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 03:54:04 by mflury            #+#    #+#             */
-/*   Updated: 2024/04/15 05:21:09 by mflury           ###   ########.fr       */
+/*   Updated: 2024/04/15 07:19:52 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,12 @@
 int	main(){
 	Contact someone;
 
-	someone.setFirstName("Mike");
-	someone.setLastName("Flury");
-	std::cout << someone.getFirstName() << " " << someone.getLastName() <<
-		 " is an IceCream !" << std::endl;
+	someone.setFirstName("Mc");
+	someone.setLastName("Flurry");
+	someone.setNickname("an IceCream");
+	someone.setPhone("3615");
+	std::cout << someone.getFirstName() << someone.getLastName() <<
+		 " is " << someone.getNickname() + " au " << someone.getPhone() + "." <<
+		 std::endl;
 	return 0;
 }
