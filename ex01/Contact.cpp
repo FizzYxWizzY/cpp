@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 02:18:09 by mflury            #+#    #+#             */
-/*   Updated: 2024/04/15 07:19:14 by mflury           ###   ########.fr       */
+/*   Updated: 2024/04/15 07:37:28 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,15 @@ Contact::Contact(
 	const std::string &firstName,
 	const std::string &lastName,
 	const std::string &nickname,
-	const std::string &phone
+	const std::string &phone,
+	const std::string &secret
 ) {
     // Constructor code here
 	setFirstName(firstName);
 	setLastName(lastName);
 	setNickname(nickname);
 	setPhone(phone);
+	setSecret(secret);
 }
 
 // Destructor definition
@@ -72,4 +74,12 @@ void Contact::setPhone(std::string phone) {
 
 std::string Contact::getPhone() const {
     return this->_phone;
+}
+
+void Contact::setSecret(std::string secret) {
+    this->_secret = secret;
+}
+
+std::string Contact::getSecret() const {
+    return this->_secret;
 }
