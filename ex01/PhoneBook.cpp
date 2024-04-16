@@ -6,19 +6,21 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 02:16:58 by mflury            #+#    #+#             */
-/*   Updated: 2024/04/16 06:20:00 by mflury           ###   ########.fr       */
+/*   Updated: 2024/04/16 06:36:14 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
 // Constructor definition
+PhoneBook::PhoneBook() {
+	// Constructor code here
+}
 
-
-
-
-
-
+// Destructor definition
+PhoneBook::~PhoneBook() {
+    // Destructor code here
+}
 // member functions definition
 
 void PhoneBook::addContact(const Contact &newContact) {   
