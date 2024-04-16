@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 02:18:06 by mflury            #+#    #+#             */
-/*   Updated: 2024/04/15 07:34:58 by mflury           ###   ########.fr       */
+/*   Updated: 2024/04/16 04:49:57 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ public:
 		const std::string &phone = "",
 		const std::string &secret = ""
 	);
-
     // Destructor
     ~Contact();
 
