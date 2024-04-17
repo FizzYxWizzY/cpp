@@ -6,7 +6,7 @@
 #    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/14 05:44:24 by mflury            #+#    #+#              #
-#    Updated: 2024/04/15 04:38:05 by mflury           ###   ########.fr        #
+#    Updated: 2024/04/17 14:43:42 by mflury           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME		:= phonebook
 
 SRCS 		:=	main.cpp \
 				Contact.cpp \
-				# PhoneBook.cpp \
+				PhoneBook.cpp \
 				
 OBJS		:= $(SRCS:.cpp=.o)
 

@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 02:18:01 by mflury            #+#    #+#             */
-/*   Updated: 2024/04/16 06:02:36 by mflury           ###   ########.fr       */
+/*   Updated: 2024/04/17 14:49:48 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <string>
 #include "Contact.hpp"
 
-#define TAB_SIZE = 8
+#define TAB_SIZE 8
 
 class PhoneBook {
 private:
@@ -39,6 +39,7 @@ public:
 
     // Member function declarations
 	void addContact(const Contact &newContact);
+    void showAllContact();
     // void addContact();
     // void searchContact();
 	// void searchContact();
