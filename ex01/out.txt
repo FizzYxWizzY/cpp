@@ -1,0 +1,56 @@
+Contact added.
+Contact added.
+Contact added.
+Contact added.
+Contact added.
+Contact added.
+Contact added.
+Contact added.
++----------+----------+----------+----------+
+|     Place|First Name| Last Name|  Nickname|
+|----------|----------|----------|----------|
+|         1|      Jean|    Caisse|DesMegaLi.|
+|----------|----------|----------|----------|
+|         2|      Jean|    Caisse|DesMegaLi.|
+|----------|----------|----------|----------|
+|         3|      Jean|    Caisse|DesMegaLi.|
+|----------|----------|----------|----------|
+|         4|      Jean|    Caisse|DesMegaLi.|
+|----------|----------|----------|----------|
+|         5|      Jean|    Caisse|DesMegaLi.|
+|----------|----------|----------|----------|
+|         6|      Jean|    Caisse|DesMegaLi.|
+|----------|----------|----------|----------|
+|         7|      Jean|    Caisse|DesMegaLi.|
+|----------|----------|----------|----------|
+|         8|      Jean|    Caisse|DesMegaLi.|
++----------+----------+----------+----------+
+Contacts shown.
+Contact added.
+Contact added.
+Contact added.
+Contact added.
+Contact added.
+Contact added.
+Contact added.
+Contact added.
++----------+----------+----------+----------+
+|     Place|First Name| Last Name|  Nickname|
+|----------|----------|----------|----------|
+|         1|jAiUnNomT.|     Salut|      tcho|
+|----------|----------|----------|----------|
+|         2|jAiUnNomT.|     Salut|      tcho|
+|----------|----------|----------|----------|
+|         3|jAiUnNomT.|     Salut|      tcho|
+|----------|----------|----------|----------|
+|         4|jAiUnNomT.|     Salut|      tcho|
+|----------|----------|----------|----------|
+|         5|jAiUnNomT.|     Salut|      tcho|
+|----------|----------|----------|----------|
+|         6|jAiUnNomT.|     Salut|      tcho|
+|----------|----------|----------|----------|
+|         7|jAiUnNomT.|     Salut|      tcho|
+|----------|----------|----------|----------|
+|         8|jAiUnNomT.|     Salut|      tcho|
++----------+----------+----------+----------+
+Contacts shown.
