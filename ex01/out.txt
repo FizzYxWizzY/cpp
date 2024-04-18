@@ -1,8 +1,13 @@
 Contact added.
 Contact added.
-Contact added.
-Contact added.
-Contact added.
++----------+----------+----------+----------+
+|     Place|First Name| Last Name|  Nickname|
+|----------|----------|----------|----------|
+|         1|      Jean|    Caisse|DesMegaLi.|
+|----------|----------|----------|----------|
+|         2|      Jean|    Caisse|DesMegaLi.|
++----------+----------+----------+----------+
+Contacts shown.
 Contact added.
 Contact added.
 Contact added.
@@ -13,44 +18,17 @@ Contact added.
 |----------|----------|----------|----------|
 |         2|      Jean|    Caisse|DesMegaLi.|
 |----------|----------|----------|----------|
-|         3|      Jean|    Caisse|DesMegaLi.|
-|----------|----------|----------|----------|
-|         4|      Jean|    Caisse|DesMegaLi.|
-|----------|----------|----------|----------|
-|         5|      Jean|    Caisse|DesMegaLi.|
-|----------|----------|----------|----------|
-|         6|      Jean|    Caisse|DesMegaLi.|
-|----------|----------|----------|----------|
-|         7|      Jean|    Caisse|DesMegaLi.|
-|----------|----------|----------|----------|
-|         8|      Jean|    Caisse|DesMegaLi.|
-+----------+----------+----------+----------+
-Contacts shown.
-Contact added.
-Contact added.
-Contact added.
-Contact added.
-Contact added.
-Contact added.
-Contact added.
-Contact added.
-+----------+----------+----------+----------+
-|     Place|First Name| Last Name|  Nickname|
-|----------|----------|----------|----------|
-|         1|jAiUnNomT.|          |          |
-|----------|----------|----------|----------|
-|         2|jAiUnNomT.|          |          |
-|----------|----------|----------|----------|
 |         3|jAiUnNomT.|          |          |
 |----------|----------|----------|----------|
 |         4|jAiUnNomT.|          |          |
 |----------|----------|----------|----------|
 |         5|jAiUnNomT.|          |          |
-|----------|----------|----------|----------|
-|         6|jAiUnNomT.|          |          |
-|----------|----------|----------|----------|
-|         7|jAiUnNomT.|          |          |
-|----------|----------|----------|----------|
-|         8|jAiUnNomT.|          |          |
 +----------+----------+----------+----------+
 Contacts shown.
+
+First Name: Jean
+Last Name: Caisse
+Nickname: DesMegaLiasses
+Phone Number: 3615
+Darkest Secret: ba! dam! dam! ta! ta! i'm lovin' it!
+Contact Shown.

@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 03:54:04 by mflury            #+#    #+#             */
-/*   Updated: 2024/04/18 06:47:50 by mflury           ###   ########.fr       */
+/*   Updated: 2024/04/18 13:47:22 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	main() {
 	PhoneBook repository;
-	Contact someone("Jean", "Caisse", "DesMegaLiasse", "3615", "ba! dam! dam! ta! ta! i'm lovin' it!");
+	Contact someone("Jean", "Caisse", "DesMegaLiasses", "3615", "ba! dam! dam! ta! ta! i'm lovin' it!");
 	Contact someone2("jAiUnNomTropLongFaitChier");
 	for (int i = 0; i < 2; i++)
 		repository.addContact(someone);
@@ -23,5 +23,7 @@ int	main() {
 	for (int i = 0; i < 3; i++)
 		repository.addContact(someone2);
 	repository.showAllContact();
+	std::cout << std::endl;
+	repository.showContact(2);
 	return 0;
 }
