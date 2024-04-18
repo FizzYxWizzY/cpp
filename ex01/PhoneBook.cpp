@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 02:16:58 by mflury            #+#    #+#             */
-/*   Updated: 2024/04/18 05:28:47 by mflury           ###   ########.fr       */
+/*   Updated: 2024/04/18 06:48:15 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void PhoneBook::showAllContact() {
     std::cout << "|     Place|First Name| Last Name|  Nickname|" << std::endl;
 	for (int i = 0; i < TAB_SIZE; i++) {
 		if (this->_tab[i].getFirstName() == "")
-			return;
+			break;
 		std::cout << "|----------|----------|----------|----------|" << std::endl;
 		std::cout << "|" << std::right << std::setw(10) << i + 1;
 		if (this->_tab[i].getFirstName().length() > 10) std::cout << "|" << std::right << std::setw(10) << this->_tab[i].getFirstName().substr(0, 9) + ".";

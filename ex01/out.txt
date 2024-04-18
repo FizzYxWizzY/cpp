@@ -37,20 +37,20 @@ Contact added.
 +----------+----------+----------+----------+
 |     Place|First Name| Last Name|  Nickname|
 |----------|----------|----------|----------|
-|         1|jAiUnNomT.|     Salut|      tcho|
+|         1|jAiUnNomT.|          |          |
 |----------|----------|----------|----------|
-|         2|jAiUnNomT.|     Salut|      tcho|
+|         2|jAiUnNomT.|          |          |
 |----------|----------|----------|----------|
-|         3|jAiUnNomT.|     Salut|      tcho|
+|         3|jAiUnNomT.|          |          |
 |----------|----------|----------|----------|
-|         4|jAiUnNomT.|     Salut|      tcho|
+|         4|jAiUnNomT.|          |          |
 |----------|----------|----------|----------|
-|         5|jAiUnNomT.|     Salut|      tcho|
+|         5|jAiUnNomT.|          |          |
 |----------|----------|----------|----------|
-|         6|jAiUnNomT.|     Salut|      tcho|
+|         6|jAiUnNomT.|          |          |
 |----------|----------|----------|----------|
-|         7|jAiUnNomT.|     Salut|      tcho|
+|         7|jAiUnNomT.|          |          |
 |----------|----------|----------|----------|
-|         8|jAiUnNomT.|     Salut|      tcho|
+|         8|jAiUnNomT.|          |          |
 +----------+----------+----------+----------+
 Contacts shown.
