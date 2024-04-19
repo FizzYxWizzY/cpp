@@ -26,9 +26,23 @@ Contact added.
 +----------+----------+----------+----------+
 Contacts shown.
 
-First Name: Jean
-Last Name: Caisse
-Nickname: DesMegaLiasses
-Phone Number: 3615
-Darkest Secret: ba! dam! dam! ta! ta! i'm lovin' it!
++----------+----------+----------+----------+
+|     Place|First Name| Last Name|  Nickname|
+|----------|----------|----------|----------|
+|         1|      Jean|    Caisse|DesMegaLi.|
+|----------|----------|----------|----------|
+|         2|      Jean|    Caisse|DesMegaLi.|
+|----------|----------|----------|----------|
+|         3|jAiUnNomT.|          |          |
+|----------|----------|----------|----------|
+|         4|jAiUnNomT.|          |          |
+|----------|----------|----------|----------|
+|         5|jAiUnNomT.|          |          |
++----------+----------+----------+----------+
+Contacts shown.
+choose a contact: First Name: jAiUnNomTropLongFaitChier
+Last Name: 
+Nickname: 
+Phone Number: 
+Darkest Secret: 
 Contact Shown.
