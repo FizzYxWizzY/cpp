@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 02:16:58 by mflury            #+#    #+#             */
-/*   Updated: 2024/04/19 07:06:18 by mflury           ###   ########.fr       */
+/*   Updated: 2024/04/19 12:37:38 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,23 +38,23 @@ Contact PhoneBook::createContact() {
 	std::string input;
 	std::cout << "Creating a new contact..." << std::endl;
 	std::cout << "Insert First Name: ";
-	std::cin >> input;
+	std::getline(std::cin, input);
 	std::cout << std::endl;
 	newContact.setFirstName(input);
 	std::cout << "Insert Last Name: ";
-	std::cin >> input;
+	std::getline(std::cin, input);
 	std::cout << std::endl;
 	newContact.setLastName(input);
 	std::cout << "Insert Nickname: ";
-	std::cin >> input;
+	std::getline(std::cin, input);
 	std::cout << std::endl;
 	newContact.setNickname(input);
 	std::cout << "Insert Phone Number: ";
-	std::cin >> input;
+	std::getline(std::cin, input);
 	std::cout << std::endl;
 	newContact.setPhone(input);
 	std::cout << "Insert Drakest Secret: ";
-	std::cin >> input;
+	std::getline(std::cin, input);
 	std::cout << std::endl;
 	newContact.setSecret(input);
 	return newContact;
@@ -62,8 +62,10 @@ Contact PhoneBook::createContact() {
 
 int PhoneBook::verifyContact(const Contact &contact) {
 	std::string field;
-	if (contact.getFirstName() == "" || contact.getLastName() == "" || contact.getNickname() == "" || contact.getPhone() == "" || contact.getSecret() == "")
+	if (contact.getFirstName() == "" || contact.getLastName() == "" || contact.getNickname() == "" || contact.getPhone() == "" || contact.getSecret() == "") {
+		std::cout << "Fields cant be empty, retry." << std::endl;
 		return 0;
+	}
 	return 1;
 }
 
