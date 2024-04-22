@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 02:16:58 by mflury            #+#    #+#             */
-/*   Updated: 2024/04/19 12:37:38 by mflury           ###   ########.fr       */
+/*   Updated: 2024/04/22 07:32:14 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,31 +31,57 @@ void PhoneBook::addContact() {
     	this->_contactCount++;
     	std::cout << "Contact added." << std::endl;
 	}
+	std::cout << "\033[2J\033[H";
 }
 
 Contact PhoneBook::createContact() {
 	Contact newContact;
 	std::string input;
-	std::cout << "Creating a new contact..." << std::endl;
+	std::cout << "\033[2J\033[H";
+	std::cout << "PhoneBook: Creating a new contact..." << std::endl;
 	std::cout << "Insert First Name: ";
-	std::getline(std::cin, input);
+	if (!std::getline(std::cin, input)) {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	}
 	std::cout << std::endl;
+	std::cout << "\033[2J\033[H";
 	newContact.setFirstName(input);
+	std::cout << "PhoneBook: Creating a new contact..." << std::endl;
 	std::cout << "Insert Last Name: ";
-	std::getline(std::cin, input);
+	if (!std::getline(std::cin, input)) {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	}
 	std::cout << std::endl;
+	std::cout << "\033[2J\033[H";
 	newContact.setLastName(input);
+	std::cout << "PhoneBook: Creating a new contact..." << std::endl;
 	std::cout << "Insert Nickname: ";
-	std::getline(std::cin, input);
+	if (!std::getline(std::cin, input)) {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	}
 	std::cout << std::endl;
+	std::cout << "\033[2J\033[H";
 	newContact.setNickname(input);
+	std::cout << "PhoneBook: Creating a new contact..." << std::endl;
 	std::cout << "Insert Phone Number: ";
-	std::getline(std::cin, input);
+	if (!std::getline(std::cin, input)) {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	}
 	std::cout << std::endl;
+	std::cout << "\033[2J\033[H";
 	newContact.setPhone(input);
+	std::cout << "PhoneBook: Creating a new contact..." << std::endl;
 	std::cout << "Insert Drakest Secret: ";
-	std::getline(std::cin, input);
+	if (!std::getline(std::cin, input)) {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	}
 	std::cout << std::endl;
+	std::cout << "\033[2J\033[H";
 	newContact.setSecret(input);
 	return newContact;
 }
@@ -63,7 +89,7 @@ Contact PhoneBook::createContact() {
 int PhoneBook::verifyContact(const Contact &contact) {
 	std::string field;
 	if (contact.getFirstName() == "" || contact.getLastName() == "" || contact.getNickname() == "" || contact.getPhone() == "" || contact.getSecret() == "") {
-		std::cout << "Fields cant be empty, retry." << std::endl;
+		std::cout << "PhoneBook: Fields cant be empty, retry." << std::endl;
 		return 0;
 	}
 	return 1;
@@ -72,16 +98,24 @@ int PhoneBook::verifyContact(const Contact &contact) {
 void PhoneBook::searchContact() {
 	std::string index;
 	unsigned int i;
+	std::cout << "\033[2J\033[H";
+	if (this->_contactCount < 1) {
+		std::cout << "PhoneBook: no contact to show." << std::endl;
+		return;
+	}
+	std::cout << "PhoneBook: Choose a contact: (1-" << this->_contactCount << ")" << std::endl;
 	this->showAllContact();
-	std::cout << "choose a contact: ";
 	std::cin >> index;
 	std::cout << std::endl;
 	std::istringstream iss(index);
     if (!(iss >> i)) {
-        std::cout << "Error: Invalid input. Please enter a valid positive number." << std::endl;
+		std::cout << "\033[2J\033[H";
+        std::cout << "PhoneBook: Invalid index." << std::endl;
         return;
     }
+	std::cout << "\033[2J\033[H";
 	this->showContact(i);
+	std::cin.get();
 	return;
 }
 
@@ -102,19 +136,50 @@ void PhoneBook::showAllContact() {
 		std::cout << "|" << std::endl;
 	}
 	std::cout << "+----------+----------+----------+----------+" << std::endl;
-	std::cout << "Contacts shown." << std::endl;
 }
 
 void PhoneBook::showContact(const unsigned int index) {
-	if (index > TAB_SIZE || index < 1)
-		std::cout << "index doesnt exist." << std::endl;
+	if (index > this->_contactCount || index < 1) {
+		std::cout << "PhoneBook: This index doesn't exist." << std::endl;
+    	std::cin.get();
+	}
 	else {
+		std::cout << "\033[2J\033[H";
 		std::cout << "First Name: " << this->_tab[index - 1].getFirstName() << std::endl;
 		std::cout << "Last Name: " << this->_tab[index - 1].getLastName() << std::endl;
 		std::cout << "Nickname: " << this->_tab[index - 1].getNickname() << std::endl;
 		std::cout << "Phone Number: " << this->_tab[index - 1].getPhone() << std::endl;
 		std::cout << "Darkest Secret: " << this->_tab[index - 1].getSecret() << std::endl;
 		std::cout << "Contact Shown." << std::endl;
+		std::cout << "PhoneBook: Press Enter to continue...";
+    	std::cin.get();
 	}
-	return;
+}
+
+#include "PhoneBook.hpp"
+
+PhoneBook::PhoneBook()
+{
+	std::cout << "PhoneBook default constructor called" << std::endl;
+}
+
+PhoneBook::~PhoneBook()
+{
+	std::cout << "PhoneBook destructor called" << std::endl;
+}
+
+PhoneBook::PhoneBook(const PhoneBook& src)
+{
+	*this = src;
+	std::cout << "PhoneBook copy constructor called" << std::endl;
+}
+
+PhoneBook& PhoneBook::operator=(const PhoneBook& rhs)
+{
+	if (this != &rhs)
+	{
+		//Don't forget to copy the attributes here
+	}
+	std::cout << "PhoneBook assignment operator called" << std::endl;
+	return *this;
 }

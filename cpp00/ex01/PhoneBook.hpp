@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 02:18:01 by mflury            #+#    #+#             */
-/*   Updated: 2024/04/19 07:06:36 by mflury           ###   ########.fr       */
+/*   Updated: 2024/04/20 07:54:25 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <string>
+#include <limits>
 #include <iomanip>
 #include <sstream>
 #include "Contact.hpp"
