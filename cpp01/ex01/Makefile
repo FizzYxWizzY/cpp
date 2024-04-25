@@ -6,15 +6,14 @@
 #    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 11:22:46 by mflury            #+#    #+#              #
-#    Updated: 2024/04/24 13:35:25 by mflury           ###   ########.fr        #
+#    Updated: 2024/04/25 04:00:04 by mflury           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		:= Zombie
 
 SRCS 		:=	Zombie.cpp \
-				NewZombie.cpp \
-				RandomChump.cpp \
+				ZombieHorde.cpp \
 				main.cpp \
 
 OBJS		:= $(SRCS:.cpp=.o)

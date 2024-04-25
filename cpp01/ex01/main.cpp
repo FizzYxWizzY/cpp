@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 10:23:03 by mflury            #+#    #+#             */
-/*   Updated: 2024/04/24 13:40:28 by mflury           ###   ########.fr       */
+/*   Updated: 2024/04/25 05:25:18 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,19 @@
 
 int main()
 {
-	std::cout << "Creating a Zombie on the stack..." << std::endl;
-	randomChump("Tania");
-	
-	std::cout << "Creating a Zombie on the heap..." << std::endl;
-	Zombie *someone = newZombie("Benjamin");
-	
-	std::cout << "Using allocated zombie in main..." << std::endl;
-	someone->announce();
-	
-	std::cout << "Deleting allocated zombie..." << std::endl;
-	delete someone;
+	if (HORDE_SIZE < 1)
+		return 0;
+	std::cout << "Creating a Zombiehorde..." << std::endl;
+	Zombie *horde = NULL;
+	horde = zombieHorde(HORDE_SIZE, NAME);
+	if (horde == NULL)
+		return 1;
+	 for (int i = 0; i < HORDE_SIZE; i++) {
+		horde[i].announce();
+	}
+	if (horde) {
+		std::cout << "Deleting the Zombiehorde..." << std::endl;
+		delete[] horde;
+	}
 	return 0;
 }
