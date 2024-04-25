@@ -1,29 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/22 10:23:03 by mflury            #+#    #+#             */
-/*   Updated: 2024/04/24 13:40:28 by mflury           ###   ########.fr       */
+/*   Created: 2024/04/22 10:22:49 by mflury            #+#    #+#             */
+/*   Updated: 2024/04/24 16:27:13 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main()
+Zombie::Zombie() {
+
+}
+
+Zombie::Zombie(const std::string name) {
+	setName(name);
+	announce();
+}
+
+Zombie::~Zombie()
 {
-	std::cout << "Creating a Zombie on the stack..." << std::endl;
-	randomChump("Tania");
-	
-	std::cout << "Creating a Zombie on the heap..." << std::endl;
-	Zombie *someone = newZombie("Benjamin");
-	
-	std::cout << "Using allocated zombie in main..." << std::endl;
-	someone->announce();
-	
-	std::cout << "Deleting allocated zombie..." << std::endl;
-	delete someone;
-	return 0;
+	std::cout << this->_name << ": Dies, again..." << std::endl;
+}
+
+void Zombie::announce() {
+	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+}
+
+void Zombie::setName(std::string name) {
+	if (name == "") {
+		std::cout << "Error. Zombie need a name." << std::endl;
+		return;
+	}
+    this->_name = name;
 }

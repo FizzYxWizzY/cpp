@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/22 10:23:03 by mflury            #+#    #+#             */
-/*   Updated: 2024/04/24 13:40:28 by mflury           ###   ########.fr       */
+/*   Created: 2024/04/22 10:22:26 by mflury            #+#    #+#             */
+/*   Updated: 2024/04/24 16:27:32 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef Zombie_HPP
+# define Zombie_HPP
 
-int main()
+#include <iostream>
+
+class Zombie
 {
-	std::cout << "Creating a Zombie on the stack..." << std::endl;
-	randomChump("Tania");
-	
-	std::cout << "Creating a Zombie on the heap..." << std::endl;
-	Zombie *someone = newZombie("Benjamin");
-	
-	std::cout << "Using allocated zombie in main..." << std::endl;
-	someone->announce();
-	
-	std::cout << "Deleting allocated zombie..." << std::endl;
-	delete someone;
-	return 0;
-}
+private:
+	std::string _name;
+	void setName(std::string name);
+
+public:
+	Zombie();
+	Zombie(const std::string _name);
+	~Zombie();
+	void announce();
+};
+
+#endif

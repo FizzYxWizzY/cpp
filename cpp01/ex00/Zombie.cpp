@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 10:22:49 by mflury            #+#    #+#             */
-/*   Updated: 2024/04/22 12:07:28 by mflury           ###   ########.fr       */
+/*   Updated: 2024/04/24 13:33:53 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,19 +33,3 @@ void Zombie::setName(std::string name) {
 	}
     this->_name = name;
 }
-
-// Zombie::Zombie(const Zombie &src)
-// {
-// 	*this = src;
-// 	std::cout << "Zombie copy constructor called" << std::endl;
-// }
-
-// Zombie &Zombie::operator=(const Zombie &rhs)
-// {
-// 	if (this != &rhs)
-// 	{
-// 		//Don't forget to copy the attributes here
-// 	}
-// 	std::cout << "Zombie assignment operator called" << std::endl;
-// 	return *this;
-// }

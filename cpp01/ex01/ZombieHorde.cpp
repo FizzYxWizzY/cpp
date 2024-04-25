@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/22 10:23:03 by mflury            #+#    #+#             */
-/*   Updated: 2024/04/24 13:40:28 by mflury           ###   ########.fr       */
+/*   Created: 2024/04/24 13:50:59 by mflury            #+#    #+#             */
+/*   Updated: 2024/04/24 16:24:50 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main()
-{
-	std::cout << "Creating a Zombie on the stack..." << std::endl;
-	randomChump("Tania");
-	
-	std::cout << "Creating a Zombie on the heap..." << std::endl;
-	Zombie *someone = newZombie("Benjamin");
-	
-	std::cout << "Using allocated zombie in main..." << std::endl;
-	someone->announce();
-	
-	std::cout << "Deleting allocated zombie..." << std::endl;
-	delete someone;
-	return 0;
+void *zombieHorde(int n, std::string name) {
+	Zombie *horde = new
+	for (int i = 0; i < n; i++) {
+		
+	}
 }
