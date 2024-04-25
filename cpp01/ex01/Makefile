@@ -6,11 +6,11 @@
 #    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 11:22:46 by mflury            #+#    #+#              #
-#    Updated: 2024/04/25 04:00:04 by mflury           ###   ########.fr        #
+#    Updated: 2024/04/25 05:33:59 by mflury           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		:= Zombie
+NAME		:= ZombieHorde
 
 SRCS 		:=	Zombie.cpp \
 				ZombieHorde.cpp \
