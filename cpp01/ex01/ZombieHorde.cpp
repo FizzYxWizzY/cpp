@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 13:50:59 by mflury            #+#    #+#             */
-/*   Updated: 2024/04/25 05:21:06 by mflury           ###   ########.fr       */
+/*   Updated: 2024/04/25 05:36:36 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Zombie *zombieHorde(int n, std::string name) {
 		return NULL;
 	}
 	for (int i = 0; i < n; i++) {
-			horde[i].setName(name);
+		horde[i].setName(name);
 	}
 	return horde;
 }
