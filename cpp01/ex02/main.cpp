@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 10:23:03 by mflury            #+#    #+#             */
-/*   Updated: 2024/04/25 13:23:11 by mflury           ###   ########.fr       */
+/*   Updated: 2024/04/26 04:02:03 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main()
 
 	std::cout << "Printing addresses..." << "\n";
 	std::cout << "s: " << &s << "\n";
-	std::cout << "sptr: " << &sptr << "\n";
+	std::cout << "sptr: " << sptr << "\n";
 	std::cout << "sref: " << &sref << "\n";
 	
 
