@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 02:18:06 by mflury            #+#    #+#             */
-/*   Updated: 2024/04/16 04:49:57 by mflury           ###   ########.fr       */
+/*   Updated: 2024/04/26 04:41:48 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ public:
 		const std::string &secret = ""
 	);
     // Destructor
-    ~Contact();
+    virtual ~Contact();
 
     // Member function declarations
     // void memberFunction1();

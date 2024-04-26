@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/25 13:31:07 by mflury            #+#    #+#             */
-/*   Updated: 2024/04/26 04:28:59 by mflury           ###   ########.fr       */
+/*   Created: 2024/04/26 04:31:40 by mflury            #+#    #+#             */
+/*   Updated: 2024/04/26 05:03:23 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef HumanA_HPP
+# define HumanA_HPP
+
+#include <iostream>
 #include "Weapon.hpp"
 
-int main() {
-	Weapon item("get");
-	std::cout << item.getType() << "\n";
-	item.setType("your mom");
-	std::cout << item.getType() << std::endl;
-	return 0;
-}
+class HumanA {
+private:
+	std::string _name;
+	Weapon _weapon;
+public:
+	HumanA(std::string name, Weapon Weapon);
+	~HumanA();
+	void attack();
+	// HumanA(const HumanA& src);
+	// HumanA &operator=(const HumanA& rhs);
+};
+
+#endif
