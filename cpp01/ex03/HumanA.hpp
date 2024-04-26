@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 04:31:40 by mflury            #+#    #+#             */
-/*   Updated: 2024/04/26 05:03:23 by mflury           ###   ########.fr       */
+/*   Updated: 2024/04/26 05:21:08 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 class HumanA {
 private:
 	std::string _name;
-	Weapon _weapon;
+	Weapon &_weapon;
 public:
-	HumanA(std::string name, Weapon Weapon);
+	HumanA(std::string name, Weapon &Weapon);
 	~HumanA();
 	void attack();
 	// HumanA(const HumanA& src);

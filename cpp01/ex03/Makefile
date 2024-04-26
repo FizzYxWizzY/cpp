@@ -6,13 +6,14 @@
 #    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 11:22:46 by mflury            #+#    #+#              #
-#    Updated: 2024/04/26 04:25:53 by mflury           ###   ########.fr        #
+#    Updated: 2024/04/26 05:13:09 by mflury           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		:= humans
 
-SRCS 		:=	Weapon.cpp \
+SRCS 		:=	HumanA.cpp \
+				Weapon.cpp \
 				main.cpp \
 			
 
