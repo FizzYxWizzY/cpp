@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 02:16:58 by mflury            #+#    #+#             */
-/*   Updated: 2024/04/22 07:32:14 by mflury           ###   ########.fr       */
+/*   Updated: 2024/04/26 23:31:32 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,32 +154,4 @@ void PhoneBook::showContact(const unsigned int index) {
 		std::cout << "PhoneBook: Press Enter to continue...";
     	std::cin.get();
 	}
-}
-
-#include "PhoneBook.hpp"
-
-PhoneBook::PhoneBook()
-{
-	std::cout << "PhoneBook default constructor called" << std::endl;
-}
-
-PhoneBook::~PhoneBook()
-{
-	std::cout << "PhoneBook destructor called" << std::endl;
-}
-
-PhoneBook::PhoneBook(const PhoneBook& src)
-{
-	*this = src;
-	std::cout << "PhoneBook copy constructor called" << std::endl;
-}
-
-PhoneBook& PhoneBook::operator=(const PhoneBook& rhs)
-{
-	if (this != &rhs)
-	{
-		//Don't forget to copy the attributes here
-	}
-	std::cout << "PhoneBook assignment operator called" << std::endl;
-	return *this;
 }

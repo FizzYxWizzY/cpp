@@ -6,14 +6,13 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 10:23:03 by mflury            #+#    #+#             */
-/*   Updated: 2024/04/24 13:40:28 by mflury           ###   ########.fr       */
+/*   Updated: 2024/04/26 23:01:08 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main()
-{
+int main() {
 	std::cout << "Creating a Zombie on the stack..." << std::endl;
 	randomChump("Tania");
 	
