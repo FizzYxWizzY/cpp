@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/25 13:31:07 by mflury            #+#    #+#             */
-/*   Updated: 2024/04/28 17:39:08 by mflury           ###   ########.fr       */
+/*   Created: 2024/04/28 16:58:34 by mflury            #+#    #+#             */
+/*   Updated: 2024/04/28 17:55:00 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
-#include "HumanA.hpp"
 #include "HumanB.hpp"
 
+HumanB::HumanB(std::string name) {
+    this->_name = name;
+    this->_weapon = NULL;
+}
 
-int main() {
-	{
-		Weapon item = Weapon("club");
-		HumanA bob("bob", item);
-		bob.attack();
-		item.setType("other club");
-		bob.attack();
-	}
-	
-	{
-		Weapon club = Weapon("crude spiked club");
+HumanB::~HumanB() {}
 
-		HumanB jim("Jim");
-		jim.attack();
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
-	return 0;
+void HumanB::setWeapon(Weapon &weapon) {
+	this->_weapon = &weapon;
+}
+
+void HumanB::attack() {
+	if (!_weapon)
+		std::cout << this->_name << " cant attack without weapon." << std::endl;
+	else
+		std::cout << this->_name << " attacks with their " << this->_weapon->getType() << "." << std::endl;
 }

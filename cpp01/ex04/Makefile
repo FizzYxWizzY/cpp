@@ -6,16 +6,13 @@
 #    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 11:22:46 by mflury            #+#    #+#              #
-#    Updated: 2024/04/28 17:54:27 by mflury           ###   ########.fr        #
+#    Updated: 2024/04/29 03:45:36 by mflury           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		:= humans
+NAME		:= sedIsForLoosers
 
-SRCS 		:=	HumanA.cpp \
-				HumanB.cpp \
-				Weapon.cpp \
-				main.cpp \
+SRCS 		:=	main.cpp \
 			
 
 OBJS		:= $(SRCS:.cpp=.o)
