@@ -1,21 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 14:21:42 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/02 08:17:33 by mflury           ###   ########.fr       */
+/*   Created: 2024/05/07 13:16:51 by mflury            #+#    #+#             */
+/*   Updated: 2024/05/08 03:50:48 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#ifndef Fixed_HPP
+# define Fixed_HPP
 
-int main(int argc, char **argv) {
-	if (argc != 2)
-		return 1;
-	Harl Harl;
-	Harl.complain(argv[1]);
-	return 0;
-}
+#include <iostream>
+
+class Fixed {
+	private:
+		int _nbr;
+		static const int _precision = 8;
+	
+	public:
+		Fixed();
+		Fixed(int value);
+		~Fixed();
+		Fixed(const Fixed &src);
+		Fixed &operator=(const Fixed &rhs);
+		int getRawBits() const;
+};
+
+#endif

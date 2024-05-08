@@ -6,14 +6,14 @@
 #    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 11:22:46 by mflury            #+#    #+#              #
-#    Updated: 2024/05/02 08:06:06 by mflury           ###   ########.fr        #
+#    Updated: 2024/05/08 07:18:29 by mflury           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		:= Harl
+NAME		:= fixed
 
 SRCS 		:=	main.cpp \
-				Harl.cpp \
+				Fixed.cpp \
 			
 
 OBJS		:= $(SRCS:.cpp=.o)

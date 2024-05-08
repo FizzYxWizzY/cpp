@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:23:08 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/01 14:38:12 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/02 08:20:35 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,21 +38,37 @@ Harl& Harl::operator=(const Harl& rhs)
 	return *this;
 }
 
-void Harl::debug() {
-	std::cout << "\' DEBUG CALLED! \'" << std::endl;
+void Harl::debug() const {
+	std::cout << "Harl: \' DEBUG CALLED! \'" << std::endl;
 }
 
-void Harl::info() {
-	std::cout << "\' INFO CALLED! \'" << std::endl;
+void Harl::info() const {
+	std::cout << "Harl: \' INFO CALLED! \'" << std::endl;
 }
 
-void Harl::warning() {
-	std::cout << "\' WARNING CALLED! \'" << std::endl;
+void Harl::warning() const {
+	std::cout << "Harl: \' WARNING CALLED! \'" << std::endl;
 }
-void Harl::error() {
-	std::cout << "\' ERROR CALLED! \'" << std::endl;
+void Harl::error() const {
+	std::cout << "Harl: \' ERROR CALLED! \'" << std::endl;
 }
 
-void Harl::complain(std::string level) {
-
+void Harl::complain(std::string level) const {
+	typedef void (Harl::*fptr)() const;
+	fptr f[] = {
+		&Harl::debug,
+		&Harl::info,
+		&Harl::warning,
+		&Harl::error
+	};
+	std::string levels[] = {
+		"DEBUG",
+		"INFO",
+		"WARNING",
+		"ERROR"
+	};
+	for (int i = 0; i < 4; i++) {
+		if (level == levels[i])
+			(this->*f[i])();
+	}
 }

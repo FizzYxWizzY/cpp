@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:23:46 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/01 14:36:03 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/02 08:02:17 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,21 @@
 # define Harl_HPP
 
 #include <iostream>
+#include <string>
 
 class Harl {
 private:
-	void debug();
-	void info();
-	void warning();
-	void error();
+	void debug() const;
+	void info() const;
+	void warning() const;
+	void error() const;
 
 public:
 	Harl();
 	~Harl();
 	Harl(const Harl& src);
 	Harl& operator=(const Harl& rhs);
-	void complain(std::string level);
+	void complain(std::string level) const;
 };
 
 #endif
