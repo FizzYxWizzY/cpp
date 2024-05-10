@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 13:15:56 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/10 10:30:37 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/10 13:54:00 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,57 @@ Fixed &Fixed::operator=(const Fixed &rhs) {
 		this->_nbr = rhs.getRawBits();
 	}
 	return *this;
+}
+
+int Fixed::operator>(const Fixed &rhs) {
+	return (this->_nbr > rhs._nbr);
+}
+
+int Fixed::operator<(const Fixed &rhs) {
+	return (this->_nbr < rhs._nbr);
+}
+
+int Fixed::operator>=(const Fixed &rhs) {
+	return (this->_nbr >= rhs._nbr);
+}
+
+int Fixed::operator<=(const Fixed &rhs) {
+	return (this->_nbr <= rhs._nbr);
+}
+
+int Fixed::operator==(const Fixed &rhs) {
+	return (this->_nbr == rhs._nbr);
+}
+
+int Fixed::operator!=(const Fixed &rhs) {
+	return (this->_nbr != rhs._nbr);
+}
+
+int Fixed::operator+(const Fixed &rhs) {
+	return (this->_nbr + rhs._nbr);
+}
+
+int Fixed::operator-(const Fixed &rhs) {
+	return (this->_nbr - rhs._nbr);
+}
+
+int Fixed::operator*(const Fixed &rhs) {
+	return ((this->_nbr / 256) * (rhs._nbr / 256));
+}
+
+int Fixed::operator/(const Fixed &rhs) {
+	return ((this->_nbr / 256) / (rhs._nbr / 256));
+}
+
+Fixed &Fixed::operator++() {
+		this->_nbr++; // Increment the value
+		return *this; // Return the updated object
+}
+
+Fixed Fixed::operator++(int) {
+		Fixed tmp = *this;
+		++this->_nbr; // Increment the value
+		return tmp; // Return the updated object
 }
 
 int Fixed::getRawBits() const {
