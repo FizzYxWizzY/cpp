@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 13:16:51 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/11 03:27:58 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/11 20:31:35 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,12 @@ class Fixed {
 		
 		Fixed &operator=(const Fixed &rhs);
 
-		Fixed operator>(const Fixed &rhs);
-		Fixed operator<(const Fixed &rhs);
-		Fixed operator>=(const Fixed &rhs);
-		Fixed operator<=(const Fixed &rhs);
-		Fixed operator==(const Fixed &rhs);
-		Fixed operator!=(const Fixed &rhs);
+		bool operator>(const Fixed &rhs) const;
+		bool operator<(const Fixed &rhs) const;
+		bool operator>=(const Fixed &rhs) const;
+		bool operator<=(const Fixed &rhs) const;
+		bool operator==(const Fixed &rhs) const;
+		bool operator!=(const Fixed &rhs) const;
 
 		Fixed operator+(const Fixed &rhs);
 		Fixed operator-(const Fixed &rhs);
@@ -47,6 +47,11 @@ class Fixed {
 		Fixed operator++(int);
 		Fixed &operator--();
 		Fixed operator--(int);
+
+		static Fixed &min(Fixed &src1, Fixed &src2);
+		static const Fixed &min(const Fixed &src1, const Fixed &src2);
+		static Fixed &max(Fixed &src1, Fixed &src2);
+		static const Fixed &max(Fixed const &src1, Fixed const &src2);
 
 		
 		int getRawBits() const;
