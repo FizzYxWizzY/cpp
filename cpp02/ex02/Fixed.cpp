@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 13:15:56 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/11 20:30:58 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/11 21:37:04 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,7 +125,6 @@ float Fixed::toFloat() const {
 	return float(this->_nbr) / 256;
 }
 
-//TODO: add min/max and const min/max.
 Fixed &Fixed::min(Fixed &src1, Fixed &src2) {
 	return (src1 < src2) ? src1 : src2;
 }
