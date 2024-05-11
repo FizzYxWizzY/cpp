@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 13:15:56 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/11 03:28:47 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/11 05:17:11 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Fixed::Fixed(int const value) {
 
 Fixed::Fixed(float const value) {
 	// std::cout << "Float constructor called" << std::endl;
-	this->setRawBits(roundf(value * 256));
+	this->setRawBits(roundf(value * (2 ^ this->_precision)));
 }
 
 Fixed::~Fixed() {
@@ -122,8 +122,10 @@ int Fixed::toInt() const {
 
 float Fixed::toFloat() const {
 	// std::cout << "toFloat member function called" << std::endl;
-	return float(this->_nbr) / 256;
+	return float(this->_nbr) / (2 ^ this->_precision);
 }
+
+//TODO: add min/max and const min/max.
 
 std::ostream &operator<<(std::ostream &o, const Fixed &rhs) {
 	o << rhs.toFloat();
