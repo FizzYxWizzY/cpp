@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 13:15:56 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/11 03:02:50 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/11 03:28:47 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,17 @@ Fixed &Fixed::operator++() {
 Fixed Fixed::operator++(int) {
 		Fixed tmp = *this;
 		++this->_nbr;
+		return tmp;
+}
+
+Fixed &Fixed::operator--() {
+		--this->_nbr;
+		return *this;
+}
+
+Fixed Fixed::operator--(int) {
+		Fixed tmp = *this;
+		--this->_nbr;
 		return tmp;
 }
 

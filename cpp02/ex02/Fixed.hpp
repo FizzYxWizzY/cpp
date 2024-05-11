@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 13:16:51 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/11 02:57:32 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/11 03:27:58 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,11 @@ class Fixed {
 		Fixed operator-(const Fixed &rhs);
 		Fixed operator*(const Fixed &rhs);
 		Fixed operator/(const Fixed &rhs);
+		
 		Fixed &operator++();
 		Fixed operator++(int);
+		Fixed &operator--();
+		Fixed operator--(int);
 
 		
 		int getRawBits() const;
