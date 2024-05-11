@@ -6,14 +6,15 @@
 #    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 11:22:46 by mflury            #+#    #+#              #
-#    Updated: 2024/05/11 21:02:33 by mflury           ###   ########.fr        #
+#    Updated: 2024/05/12 01:22:51 by mflury           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		:= ClapTrap
+NAME		:= ScavTrap
 
 SRCS 		:=	main.cpp \
 				ClapTrap.cpp \
+				ScavTrap.cpp \
 			
 
 OBJS		:= $(SRCS:.cpp=.o)

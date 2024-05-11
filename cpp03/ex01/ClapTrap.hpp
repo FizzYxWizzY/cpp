@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 21:03:25 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/11 23:54:00 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/12 01:10:12 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <iostream>
 
 class ClapTrap {
-	private:
+	protected:
 		std::string _name;
 		int _hitPoints;
 		int _energyPoint;
@@ -38,3 +38,4 @@ class ClapTrap {
 };
 
 #endif
+
