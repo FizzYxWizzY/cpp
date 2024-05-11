@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 13:16:51 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/10 13:41:33 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/11 02:57:32 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,19 @@ class Fixed {
 		
 		Fixed &operator=(const Fixed &rhs);
 
-		int operator>(const Fixed &rhs);
-		int operator<(const Fixed &rhs);
-		int operator>=(const Fixed &rhs);
-		int operator<=(const Fixed &rhs);
-		int operator==(const Fixed &rhs);
-		int operator!=(const Fixed &rhs);
+		Fixed operator>(const Fixed &rhs);
+		Fixed operator<(const Fixed &rhs);
+		Fixed operator>=(const Fixed &rhs);
+		Fixed operator<=(const Fixed &rhs);
+		Fixed operator==(const Fixed &rhs);
+		Fixed operator!=(const Fixed &rhs);
 
-		int operator+(const Fixed &rhs);
-		int operator-(const Fixed &rhs);
-		int operator*(const Fixed &rhs);
-		int operator/(const Fixed &rhs);
+		Fixed operator+(const Fixed &rhs);
+		Fixed operator-(const Fixed &rhs);
+		Fixed operator*(const Fixed &rhs);
+		Fixed operator/(const Fixed &rhs);
 		Fixed &operator++();
-		Fixed operator++(int value);
+		Fixed operator++(int);
 
 		
 		int getRawBits() const;
