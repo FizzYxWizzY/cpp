@@ -6,16 +6,17 @@
 #    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 11:22:46 by mflury            #+#    #+#              #
-#    Updated: 2024/05/12 02:07:46 by mflury           ###   ########.fr        #
+#    Updated: 2024/05/12 03:13:12 by mflury           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		:= FragTrap
+NAME		:= DiamondTrap
 
 SRCS 		:=	main.cpp \
 				ClapTrap.cpp \
 				ScavTrap.cpp \
 				FragTrap.cpp \
+				DiamondTrap.cpp \
 			
 
 OBJS		:= $(SRCS:.cpp=.o)

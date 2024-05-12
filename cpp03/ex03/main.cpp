@@ -6,19 +6,23 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 21:02:39 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/12 02:08:39 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/12 04:40:13 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
-
+#include "DiamondTrap.hpp"
 
 int main() {
-	FragTrap dude("EtalonDuCul");
-	std::cout << dude.getName() << std::endl; 
-	dude.highFiveGuys();
+	DiamondTrap dude("Miguel");
+	DiamondTrap dude2(dude);
+
+	dude.whoiam();
+	dude.attack("Randy");
+	dude2.whoiam();
+	dude2.attack("Randy2");
 
 
 
