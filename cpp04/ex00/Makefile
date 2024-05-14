@@ -6,7 +6,7 @@
 #    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 11:22:46 by mflury            #+#    #+#              #
-#    Updated: 2024/05/14 02:41:24 by mflury           ###   ########.fr        #
+#    Updated: 2024/05/14 03:34:47 by mflury           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,9 @@ SRCS 		:=	main.cpp \
 				Animal.cpp \
 				Cat.cpp \
 				Dog.cpp \
+				WrongAnimal.cpp \
+				WrongCat.cpp \
+				WrongDog.cpp \
 			
 
 OBJS		:= $(SRCS:.cpp=.o)
