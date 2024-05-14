@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 03:09:33 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/14 03:26:12 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/14 08:40:06 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class WrongAnimal {
 		virtual ~WrongAnimal();
 		WrongAnimal(const WrongAnimal &src);
 		WrongAnimal &operator=(const WrongAnimal &rhs);
-		void virtual makeSound() const;
+		void makeSound() const;
 };
 
 #endif
