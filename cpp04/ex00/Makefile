@@ -6,7 +6,7 @@
 #    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 11:22:46 by mflury            #+#    #+#              #
-#    Updated: 2024/05/13 03:41:08 by mflury           ###   ########.fr        #
+#    Updated: 2024/05/14 02:41:24 by mflury           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SRCS 		:=	main.cpp \
 OBJS		:= $(SRCS:.cpp=.o)
 
 CC 			:= c++
-CFLAGS		:= -Wall -Wextra -Werror -std=c++98 -fsanitize=address,undefined
+CFLAGS		:= -Wall -Wextra -Werror -g -std=c++98 -fsanitize=address,undefined
 RM			:= rm -f
 MAKEFLAGS   += --no-print-directory
 

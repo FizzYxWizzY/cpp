@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 03:09:33 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/13 11:51:42 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/14 02:40:21 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ class Animal {
 		
 	public:
 		Animal();
-		~Animal();
+		virtual ~Animal();
 		Animal(const Animal &src);
 		Animal &operator=(const Animal &rhs);
-		void virtual makeSound();
+		void virtual makeSound() const;
 };
 
 #endif

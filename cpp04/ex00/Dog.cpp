@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 03:35:48 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/13 11:53:36 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/14 02:31:52 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Dog::~Dog() {
 	std::cout << "Dog destructor called" << std::endl;
 }
 
-Dog::Dog(const Dog &src): Animal(src){
+Dog::Dog(const Dog &src): Animal(src) {
 	*this = src;
 	std::cout << "Dog copy constructor called" << std::endl;
 }
@@ -35,6 +35,6 @@ Dog &Dog::operator=(const Dog &rhs) {
 	return *this;
 }
 
-void Dog::makeSound() {
+void Dog::makeSound() const {
 	std::cout << this->_type << ": Woof motherfuckers!" << std::endl;
 }

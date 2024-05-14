@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 03:32:54 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/13 11:52:35 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/14 02:32:23 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ Cat &Cat::operator=(const Cat &rhs) {
 	return *this;
 }
 
-void Cat::makeSound() {
+void Cat::makeSound() const {
 	std::cout << this->_type << ": Meow motherfuckers!" << std::endl;
 }

@@ -6,13 +6,13 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 03:11:51 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/13 11:46:05 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/14 02:46:31 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal(): _type("None") {
+Animal::Animal(): _type("Animal") {
 	std::cout << "Animal default constructor called" << std::endl;
 }
 
@@ -34,6 +34,6 @@ Animal &Animal::operator=(const Animal &rhs) {
 	return *this;
 }
 
-void Animal::makeSound() {
-	std::cout << "Animal Can't make sound..." << std::endl;
+void Animal::makeSound() const {
+	std::cout << this->_type << ": *Some generic sound*" << std::endl;
 }

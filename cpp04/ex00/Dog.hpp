@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 03:34:37 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/13 11:51:28 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/14 02:38:32 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@
 #include <iostream>
 #include "Animal.hpp"
 
-class Dog: virtual public Animal {
+class Dog: public Animal {
 	private:
 		
 	public:
 		Dog();
-		~Dog();
+		virtual ~Dog();
 		Dog(const Dog &src);
 		Dog &operator=(const Dog &rhs);
 
-		void makeSound();
+		void makeSound() const;
 };
 
 #endif
