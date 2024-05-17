@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 03:11:51 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/16 13:14:45 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/17 04:08:37 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 Animal::Animal(): _type("Animal") {
 	std::cout << "Animal default constructor called" << std::endl;
+}
+
+Animal::Animal(std::string const &type) : _type(type) {
+	std::cout << "Parameterized constructor of Animal was call" << std::endl;
 }
 
 Animal::~Animal() {

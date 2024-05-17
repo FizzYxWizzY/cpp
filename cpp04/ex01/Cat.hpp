@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 03:32:15 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/16 03:50:30 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/16 13:36:08 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,12 @@
 
 #include <iostream>
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 
 class Cat: public Animal {
 	private:
-		
+		Brain *brain;
 	public:
 		Cat();
 		virtual ~Cat();

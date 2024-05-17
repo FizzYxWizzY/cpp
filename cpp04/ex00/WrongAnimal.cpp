@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 03:11:51 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/14 03:23:52 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/16 13:19:37 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,10 @@ WrongAnimal &WrongAnimal::operator=(const WrongAnimal &rhs) {
 	}
 	std::cout << "WrongAnimal assignment operator called" << std::endl;
 	return *this;
+}
+
+std::string const &WrongAnimal::getType() const {
+	return this->_type;
 }
 
 void WrongAnimal::makeSound() const {

@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 03:09:33 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/14 02:40:21 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/16 03:50:06 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ class Animal {
 		virtual ~Animal();
 		Animal(const Animal &src);
 		Animal &operator=(const Animal &rhs);
+		
+		std::string const &getType() const;
+
 		void virtual makeSound() const;
 };
 

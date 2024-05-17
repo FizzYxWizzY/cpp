@@ -6,30 +6,34 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 03:32:54 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/16 03:50:50 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/17 07:49:47 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat() {
+Cat::Cat(): Animal() {
 	std::cout << "Cat default constructor called" << std::endl;
 	this->_type = "Cat";
+	this->brain = new Brain();
 }
 
 Cat::~Cat() {
 	std::cout << "Cat destructor called" << std::endl;
+	delete this->brain;	
 }
 
-Cat::Cat(const Cat &src): Animal(src){
-	*this = src;
+Cat::Cat(const Cat &src): Animal(src._type){
 	std::cout << "Cat copy constructor called" << std::endl;
+	delete this->brain;
+	this->brain = new Brain(*(src.brain));
 }
 
 Cat &Cat::operator=(const Cat &rhs) {
 	if (this != &rhs) {
-		// Don't forget to copy the attributes here
 		this->_type = rhs._type;
+		delete this->brain;
+		this->brain = new Brain(*rhs.brain);
 	}
 	std::cout << "Cat assignment operator called" << std::endl;
 	return *this;

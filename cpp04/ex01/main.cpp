@@ -6,51 +6,29 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 03:39:28 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/16 13:19:44 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/17 08:39:08 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
-#include "WrongDog.hpp"
 
-int main() {
-	{
-		const Animal *meta = new Animal();
-		const Animal *j = new Dog();
-		const Animal *i = new Cat();
-
-		std::cout << j->getType() << std::endl;
-		std::cout << i->getType() << std::endl;
-		std::cout << meta->getType() << std::endl;
-		
-		j->makeSound();
-		i->makeSound();
-		meta->makeSound();
-
-		delete j;
-		delete i;
-		delete meta;
+int main() {	
+	const Animal *animal[10];
+	std::cout << "\nCeating the animals..." << std::endl;
+	for (int i = 0; i < 10; ++i) {
+		(i % 2) ? animal[i] = new Cat() : animal[i] = new Dog();
 	}
-	{
-		const WrongAnimal *meta = new WrongAnimal();
-		const WrongAnimal *j = new WrongDog();
-		const WrongAnimal *i = new WrongCat();
 
-		std::cout << j->getType() << std::endl;
-		std::cout << i->getType() << std::endl;
-		std::cout << meta->getType() << std::endl;
+	std::cout << "\nUsing the animals..." << std::endl;
+	for (int i = 0; i < 10; ++i) {
+		std::cout << animal[i]->getType() << std::endl;
+	}
 
-		j->makeSound();
-		i->makeSound();
-		meta->makeSound();
-
-		delete j;
-		delete i;
-		delete meta;
+	std::cout << "\nDeleting the animals..." << std::endl;
+	for (int i = 0; i < 10; ++i) {
+		delete animal[i];
 	}
 	return 0;
 }
