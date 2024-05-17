@@ -6,17 +6,15 @@
 #    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 11:22:46 by mflury            #+#    #+#              #
-#    Updated: 2024/05/17 10:19:11 by mflury           ###   ########.fr        #
+#    Updated: 2024/05/17 11:49:11 by mflury           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		:= Animal
+NAME		:= materia
 
 SRCS 		:=	main.cpp \
-				AAnimal.cpp \
-				Cat.cpp \
-				Dog.cpp \
-				Brain.cpp \
+				AMateria.cpp \
+				Ice.cpp \
 			
 
 OBJS		:= $(SRCS:.cpp=.o)
