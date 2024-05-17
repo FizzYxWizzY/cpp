@@ -6,7 +6,7 @@
 #    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 11:22:46 by mflury            #+#    #+#              #
-#    Updated: 2024/05/17 11:49:11 by mflury           ###   ########.fr        #
+#    Updated: 2024/05/17 13:41:19 by mflury           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ NAME		:= materia
 SRCS 		:=	main.cpp \
 				AMateria.cpp \
 				Ice.cpp \
+				Cure.cpp \
 			
 
 OBJS		:= $(SRCS:.cpp=.o)
