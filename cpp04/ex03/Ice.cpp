@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 11:35:49 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/17 13:28:38 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/19 18:39:25 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,6 @@ AMateria *Ice::clone() const {
 	return materia;
 }
 
-void Ice::use(std::string &target) {
-	std::cout << "* Shoots an ice bolt at " << target + " *" << std::endl;
+void Ice::use(ICharacter &target) {
+	std::cout << "* Shoots an ice bolt at " << target.getName() + " *" << std::endl;
 }

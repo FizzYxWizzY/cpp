@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 11:34:32 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/17 13:24:52 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/19 18:38:57 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Ice: virtual public AMateria {
 		Ice &operator=(const Ice &rhs);
 
 		AMateria *clone() const;
-		void use(std::string &target);
+		void use(ICharacter &target);
 };
 
 #endif

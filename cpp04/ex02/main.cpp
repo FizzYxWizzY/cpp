@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 03:39:28 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/17 10:21:49 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/18 01:00:50 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "Cat.hpp"
 #include "Dog.hpp"
 
-int main() {	
+int main() {
 	const AAnimal *animal[10];
 	std::cout << "\nCeating the animals..." << std::endl;
 	for (int i = 0; i < 10; ++i) {

@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 10:56:49 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/17 11:53:22 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/19 18:40:55 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ std::string const &AMateria::getType() const {
 	return this->_type;
 }
 
-void AMateria::use(std::string &target) {
-	std::cout << "freezes " << target << std::endl;
+void AMateria::use(ICharacter &target) {
+	std::cout << "freezes " << target.getName() << std::endl;
 	return;
 }

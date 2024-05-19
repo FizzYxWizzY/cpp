@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 13:32:02 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/17 13:56:02 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/19 18:39:38 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,6 @@ AMateria *Cure::clone() const {
 	return materia;
 }
 
-void Cure::use(std::string &target) {
-	std::cout << "* Heals  " << target + "'s wounds *" << std::endl;
+void Cure::use(ICharacter &target) {
+	std::cout << "* Heals  " << target.getName() + "'s wounds *" << std::endl;
 }
