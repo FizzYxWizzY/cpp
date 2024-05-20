@@ -6,13 +6,13 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 10:56:49 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/19 18:40:55 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/20 04:43:31 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
 
-AMateria::AMateria() {
+AMateria::AMateria(): _type("None") {
 	std::cout << "AMateria default constructor called" << std::endl;
 }
 
@@ -43,6 +43,6 @@ std::string const &AMateria::getType() const {
 }
 
 void AMateria::use(ICharacter &target) {
-	std::cout << "freezes " << target.getName() << std::endl;
+	std::cout  << "Nothing happens to " << target.getName() <<std::endl;
 	return;
 }

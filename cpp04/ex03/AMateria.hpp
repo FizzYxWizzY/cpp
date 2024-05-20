@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 10:56:30 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/19 18:33:06 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/20 04:38:21 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class AMateria {
 		std::string const &getType() const;
 
 		virtual AMateria *clone() const = 0;
-		//TODO: change string to ICharacter when it exists:
+		
 		virtual void use(ICharacter &target);
 };
 
