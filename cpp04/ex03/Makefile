@@ -6,7 +6,7 @@
 #    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 11:22:46 by mflury            #+#    #+#              #
-#    Updated: 2024/05/19 17:05:22 by mflury           ###   ########.fr        #
+#    Updated: 2024/05/20 12:18:38 by mflury           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,8 @@ SRCS 		:=	main.cpp \
 				Ice.cpp \
 				Cure.cpp \
 				Character.cpp \
+				MateriaSource.cpp \
+				
 
 			
 

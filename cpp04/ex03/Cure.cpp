@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 13:32:02 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/20 04:44:42 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/20 11:41:42 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Cure &Cure::operator=(const Cure &rhs) {
 }
 
 AMateria *Cure::clone() const {
-	AMateria *materia = new Cure();
+	AMateria *materia = new Cure(*this);
 	return materia;
 }
 

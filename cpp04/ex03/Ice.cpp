@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 11:35:49 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/19 18:39:25 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/20 11:42:09 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Ice &Ice::operator=(const Ice &rhs) {
 }
 
 AMateria *Ice::clone() const {
-	AMateria *materia = new Ice();
+	AMateria *materia = new Ice(*this);
 	return materia;
 }
 

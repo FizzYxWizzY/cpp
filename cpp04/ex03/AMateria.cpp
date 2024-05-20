@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 10:56:49 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/20 04:43:31 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/20 11:37:22 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ AMateria::~AMateria() {
 	std::cout << "AMateria destructor called" << std::endl;
 }
 
-AMateria::AMateria(const AMateria &src) {
-	*this = src;
+AMateria::AMateria(const AMateria &src): _type(src.getType()) {
 	std::cout << "AMateria copy constructor called" << std::endl;
 }
 

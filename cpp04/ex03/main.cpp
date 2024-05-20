@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 10:57:20 by mflury            #+#    #+#             */
-/*   Updated: 2024/05/20 04:39:20 by mflury           ###   ########.fr       */
+/*   Updated: 2024/05/20 11:56:54 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 int main() {
 	std::string name = "Bob";
 	Character bob(name);
-	AMateria *materia = new Cure();
-	AMateria *materia2 = materia->clone();
+	Cure *materia = new Cure();
+	AMateria *materia2 = new Cure(*materia);
 	
 	std::cout << materia->getType() << std::endl;
 	delete materia;
