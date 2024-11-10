@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 00:57:05 by mflury            #+#    #+#             */
-/*   Updated: 2024/11/04 04:06:04 by mflury           ###   ########.fr       */
+/*   Updated: 2024/11/10 03:36:38 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,8 @@ Bureaucrat::Bureaucrat(const Bureaucrat &src) : _name(src.getName()), _grade(src
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &rhs) {
 	std::cout << "Bureaucrat assignment operator called." << std::endl;
-	if (this != &rhs) {
+	if (this != &rhs)
 		this->setGrade(rhs.getGrade());
-		// this->_name = rhs.getName();
-	}
 	return *this;
 }
 
@@ -58,7 +56,7 @@ void Bureaucrat::setGrade(int grade) {
 		this->_grade = grade;
 }
 
-int Bureaucrat::getGrade() const {
+unsigned int Bureaucrat::getGrade() const {
 	return this->_grade;
 }
 
@@ -74,13 +72,28 @@ void	Bureaucrat::demote() {
 	this->setGrade(this->getGrade() + 1);
 }
 
+void	Bureaucrat::signForm(Form &form) {
+	if (form.getSignature()) {
+		std::cout << "Bureaucat: Form already signed." << std::endl;
+		return;
+	} else {
+		try {
+			form.beSigned(*this);
+			std::cout << this->getName() << " signed " << form.getName() << "." << std::endl;
+		}
+		catch (std::exception &e) {
+			std::cout << this->getName() << " couldn't signed " << form.getName();
+			std::cout << " because '" << e.what() << "'." << std::endl;
+		}
+	}
+}
 
 const char *Bureaucrat::GradeTooHighException::what() const throw() {
-	return "Grade cannot be higher than 1.";
+	return "Bureaucrat: Grade too high.";
 }
 
 const char *Bureaucrat::GradeTooLowException::what() const throw() {
-	return "Grade cannot be lower than 150.";
+	return "Bureaucrat: Grade too low.";
 }
 
 

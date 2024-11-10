@@ -6,13 +6,14 @@
 #    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/14 04:36:31 by mflury            #+#    #+#              #
-#    Updated: 2024/11/04 03:40:17 by mflury           ###   ########.fr        #
+#    Updated: 2024/11/08 06:56:53 by mflury           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		:= bureaucrat
 
 SRCS 		:=	Bureaucrat.cpp \
+				Form.cpp \
 				main.cpp \
 
 OBJS		:= $(SRCS:.cpp=.o)
