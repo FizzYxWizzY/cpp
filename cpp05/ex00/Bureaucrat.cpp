@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 00:57:05 by mflury            #+#    #+#             */
-/*   Updated: 2024/11/04 04:06:04 by mflury           ###   ########.fr       */
+/*   Updated: 2024/11/11 21:32:40 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ Bureaucrat::Bureaucrat(std::string &name) : _name(name), _grade(MIN_GRADE) {
 	std::cout << "Bureaucrat 'name' constructor called." << std::endl;
 }
 
-Bureaucrat::Bureaucrat(int grade) : _name("Undefined") {
+Bureaucrat::Bureaucrat(unsigned int grade) : _name("Undefined") {
 	std::cout << "Bureaucrat 'grade' constructor called." << std::endl;
 	setGrade(grade);
 }
 
-Bureaucrat::Bureaucrat(std::string &name, int grade) : _name(name) {
+Bureaucrat::Bureaucrat(std::string &name, unsigned int grade) : _name(name) {
 	std::cout << "Bureaucrat 'name & grade' constructor called." << std::endl;
 	setGrade(grade);
 }
@@ -49,7 +49,7 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &rhs) {
 }
 
 
-void Bureaucrat::setGrade(int grade) {
+void Bureaucrat::setGrade(unsigned int grade) {
 	if (grade < MAX_GRADE)
 		throw GradeTooHighException();
 	else if (grade > MIN_GRADE)
@@ -58,7 +58,7 @@ void Bureaucrat::setGrade(int grade) {
 		this->_grade = grade;
 }
 
-int Bureaucrat::getGrade() const {
+unsigned int Bureaucrat::getGrade() const {
 	return this->_grade;
 }
 
@@ -76,11 +76,11 @@ void	Bureaucrat::demote() {
 
 
 const char *Bureaucrat::GradeTooHighException::what() const throw() {
-	return "Grade cannot be higher than 1.";
+	return "Bureaucrat: Grade cannot be higher than 1.";
 }
 
 const char *Bureaucrat::GradeTooLowException::what() const throw() {
-	return "Grade cannot be lower than 150.";
+	return "Bureaucrat: Grade cannot be lower than 150.";
 }
 
 

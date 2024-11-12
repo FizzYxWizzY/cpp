@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 00:57:05 by mflury            #+#    #+#             */
-/*   Updated: 2024/11/11 00:51:49 by mflury           ###   ########.fr       */
+/*   Updated: 2024/11/12 15:45:31 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &rhs) {
 }
 
 
-void Bureaucrat::setGrade(int grade) {
+void Bureaucrat::setGrade(unsigned int grade) {
 	if (grade < MAX_GRADE)
 		throw GradeTooHighException();
 	else if (grade > MIN_GRADE)
@@ -72,7 +72,7 @@ void	Bureaucrat::demote() {
 	this->setGrade(this->getGrade() + 1);
 }
 
-void	Bureaucrat::signForm(Form &form) {
+void	Bureaucrat::signForm(AForm &form) const {
 	if (form.getSignature()) {
 		std::cout << "Bureaucat: Form already signed." << std::endl;
 		return;
@@ -86,6 +86,18 @@ void	Bureaucrat::signForm(Form &form) {
 			std::cout << " because '" << e.what() << "'." << std::endl;
 		}
 	}
+}
+
+void	Bureaucrat::executeForm(AForm const & form) {
+	try {
+		form.execute(*this);
+		std::cout << this->getName() << " executed " << form.getName() << "." << std::endl;
+	}
+	catch(const std::exception& e) {
+		std::cout << this->getName() << " couldn't execute " << form.getName();
+		std::cout << " because '" << e.what() << "'." << std::endl;
+	}
+	
 }
 
 const char *Bureaucrat::GradeTooHighException::what() const throw() {

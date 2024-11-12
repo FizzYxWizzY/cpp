@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 00:56:36 by mflury            #+#    #+#             */
-/*   Updated: 2024/11/11 00:50:25 by mflury           ###   ########.fr       */
+/*   Updated: 2024/11/12 15:05:23 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define Bureaucrat_HPP
 
 #include <iostream>
-#include "Form.hpp"
+#include "AForm.hpp"
 
 # ifndef MAX_GRADE
 # define MAX_GRADE 1
@@ -23,7 +23,7 @@
 # define MIN_GRADE 150
 # endif
 
-class Form;
+class AForm;
 
 class Bureaucrat {
 	private:
@@ -50,14 +50,15 @@ class Bureaucrat {
 		Bureaucrat(const Bureaucrat &src);
 		Bureaucrat &operator=(const Bureaucrat &rhs);
 
-		void				setGrade(int grade);
+		void				setGrade(unsigned int grade);
 		unsigned int		getGrade() const;
 		const std::string	&getName() const;
 
 		void				promote();
 		void				demote();
 
-		void				signForm(Form &form);
+		void				signForm(AForm &form) const;
+		void				executeForm(AForm const & form);
 };
 
 std::ostream &operator<<(std::ostream &os, const Bureaucrat &ref);

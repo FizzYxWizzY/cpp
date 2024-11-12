@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 00:56:36 by mflury            #+#    #+#             */
-/*   Updated: 2024/11/11 00:50:25 by mflury           ###   ########.fr       */
+/*   Updated: 2024/11/11 20:48:00 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ class Bureaucrat {
 		Bureaucrat(const Bureaucrat &src);
 		Bureaucrat &operator=(const Bureaucrat &rhs);
 
-		void				setGrade(int grade);
+		void				setGrade(unsigned int grade);
 		unsigned int		getGrade() const;
 		const std::string	&getName() const;
 

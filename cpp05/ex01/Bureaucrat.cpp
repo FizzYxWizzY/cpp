@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 00:57:05 by mflury            #+#    #+#             */
-/*   Updated: 2024/11/11 00:51:49 by mflury           ###   ########.fr       */
+/*   Updated: 2024/11/11 20:48:21 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &rhs) {
 }
 
 
-void Bureaucrat::setGrade(int grade) {
+void Bureaucrat::setGrade(unsigned int grade) {
 	if (grade < MAX_GRADE)
 		throw GradeTooHighException();
 	else if (grade > MIN_GRADE)
