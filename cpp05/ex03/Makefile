@@ -6,7 +6,7 @@
 #    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/14 04:36:31 by mflury            #+#    #+#              #
-#    Updated: 2024/11/12 18:32:49 by mflury           ###   ########.fr        #
+#    Updated: 2024/11/14 13:25:00 by mflury           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ SRCS 		:=	Bureaucrat.cpp \
 				ShrubberyCreationForm.cpp \
 				PresidentialPardonForm.cpp \
 				RobotomyRequestForm.cpp \
+				Intern.cpp \
 				main.cpp \
 
 OBJS		:= $(SRCS:.cpp=.o)
