@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 00:56:36 by mflury            #+#    #+#             */
-/*   Updated: 2024/11/12 15:05:23 by mflury           ###   ########.fr       */
+/*   Updated: 2024/11/23 20:21:14 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@ class Bureaucrat {
 	
 	public:
 		Bureaucrat();
-		Bureaucrat(std::string &name);
+		Bureaucrat(const std::string &name);
 		Bureaucrat(unsigned int grade);
-		Bureaucrat(std::string &name, unsigned int grade);
+		Bureaucrat(const std::string &name, unsigned int grade);
 
 		~Bureaucrat();
 		Bureaucrat(const Bureaucrat &src);

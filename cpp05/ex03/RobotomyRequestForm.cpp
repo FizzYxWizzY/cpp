@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 18:29:43 by mflury            #+#    #+#             */
-/*   Updated: 2024/11/12 19:19:24 by mflury           ###   ########.fr       */
+/*   Updated: 2024/11/23 21:12:50 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,3 +51,6 @@ void	RobotomyRequestForm::execute(const Bureaucrat &bureaucrat) const {
 	}
 }
 
+AForm *RobotomyRequestForm::createForm(const std::string &target) {
+    		return new RobotomyRequestForm(target);
+}

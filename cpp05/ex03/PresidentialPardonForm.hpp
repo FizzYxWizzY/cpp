@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:55:05 by mflury            #+#    #+#             */
-/*   Updated: 2024/11/12 17:24:03 by mflury           ###   ########.fr       */
+/*   Updated: 2024/11/23 18:53:57 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,13 @@ class PresidentialPardonForm : public AForm {
 		PresidentialPardonForm();
 		PresidentialPardonForm(const std::string &target);
 		
-		~PresidentialPardonForm();
+		virtual ~PresidentialPardonForm();
 		PresidentialPardonForm(const PresidentialPardonForm &src);
 		PresidentialPardonForm &operator=(const PresidentialPardonForm &rhs);
 
 		virtual void	execute(const Bureaucrat &bureaucrat) const;
+
+		static AForm *createForm(const std::string &target);
 };
 
 #endif

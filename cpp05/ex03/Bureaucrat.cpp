@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 00:57:05 by mflury            #+#    #+#             */
-/*   Updated: 2024/11/12 15:45:31 by mflury           ###   ########.fr       */
+/*   Updated: 2024/11/23 21:14:24 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Bureaucrat::Bureaucrat() : _name("Undefined"), _grade(MIN_GRADE) {
 	std::cout << "Bureaucrat default constructor called." << std::endl;
 }
 
-Bureaucrat::Bureaucrat(std::string &name) : _name(name), _grade(MIN_GRADE) {
+Bureaucrat::Bureaucrat(const std::string &name) : _name(name), _grade(MIN_GRADE) {
 	std::cout << "Bureaucrat 'name' constructor called." << std::endl;
 }
 
@@ -25,7 +25,7 @@ Bureaucrat::Bureaucrat(unsigned int grade) : _name("Undefined") {
 	setGrade(grade);
 }
 
-Bureaucrat::Bureaucrat(std::string &name, unsigned int grade) : _name(name) {
+Bureaucrat::Bureaucrat(const std::string &name, unsigned int grade) : _name(name) {
 	std::cout << "Bureaucrat 'name & grade' constructor called." << std::endl;
 	setGrade(grade);
 }

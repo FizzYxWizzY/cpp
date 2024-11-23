@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:55:22 by mflury            #+#    #+#             */
-/*   Updated: 2024/11/12 18:43:55 by mflury           ###   ########.fr       */
+/*   Updated: 2024/11/23 18:54:57 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,8 @@ void PresidentialPardonForm::execute(const Bureaucrat &bureaucrat) const {
 	else {
 		std::cout << this->getTarget() << " has been pardoned by Zaphod Beeblebrox." << std::endl;
 	}
+}
+
+AForm *PresidentialPardonForm::createForm(const std::string &target) {
+    		return new PresidentialPardonForm(target);
 }
