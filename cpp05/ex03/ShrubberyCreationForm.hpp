@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 23:11:24 by mflury            #+#    #+#             */
-/*   Updated: 2024/11/23 19:01:33 by mflury           ###   ########.fr       */
+/*   Updated: 2024/11/24 03:07:57 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class ShrubberyCreationForm : public AForm {
 
 		virtual void	execute(const Bureaucrat &bureaucrat) const;
 
-		static AForm *createForm(const std::string& target);
+		static AForm *createForm(const std::string &target);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 23:12:24 by mflury            #+#    #+#             */
-/*   Updated: 2024/11/23 18:55:30 by mflury           ###   ########.fr       */
+/*   Updated: 2024/11/24 03:07:48 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,6 @@ void ShrubberyCreationForm::execute(const Bureaucrat &bureaucrat) const {
 	}
 }
 
-AForm *ShrubberyCreationForm::createForm(const std::string& target) {
+AForm *ShrubberyCreationForm::createForm(const std::string &target) {
     		return new ShrubberyCreationForm(target);
 }
