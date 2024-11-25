@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 04:14:32 by mflury            #+#    #+#             */
-/*   Updated: 2024/11/25 03:41:03 by mflury           ###   ########.fr       */
+/*   Updated: 2024/11/25 06:23:48 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class ScalarConverter {
     private:
         ScalarConverter();
     public:
-        static void convert(const std::string &literal);
+        static void convert(const std::string &input);
 };
 
 #endif
