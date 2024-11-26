@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 03:13:34 by mflury            #+#    #+#             */
-/*   Updated: 2024/11/25 06:23:52 by mflury           ###   ########.fr       */
+/*   Updated: 2024/11/26 01:05:45 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,13 +85,15 @@ void ScalarConverter::convert(const std::string &input) {
                 std::cout << "int: impossible" << std::endl;
             }
 
-            if (floatValue == static_cast<int>(floatValue)) {
+            // if (floatValue > ) {}
+
+            if (floatValue == static_cast<int>(floatValue) && floatValue < 1000000) {
                 std::cout << "float: " << floatValue << ".0f" << std::endl;
             } else {
                 std::cout << "float: " << floatValue << "f" << std::endl;
             }
 
-            if (doubleValue == static_cast<int>(doubleValue)) {
+            if (doubleValue == static_cast<int>(doubleValue) && doubleValue < 1000000) {
                 std::cout << "double: " << doubleValue << ".0" << std::endl;
             } else {
                 std::cout << "double: " << doubleValue << std::endl;
