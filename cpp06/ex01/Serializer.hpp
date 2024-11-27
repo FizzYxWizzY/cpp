@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 03:41:07 by mflury            #+#    #+#             */
-/*   Updated: 2024/11/26 09:15:19 by mflury           ###   ########.fr       */
+/*   Updated: 2024/11/26 11:30:46 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,6 @@
 
 #include <iostream>
 #include <string>
-#include <cstdlib>
-#include <climits>
-#include <cctype>
-#include <cmath>
 #include <stdint.h>
 
 typedef struct data {
