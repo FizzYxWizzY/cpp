@@ -6,13 +6,13 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 11:06:12 by mflury            #+#    #+#             */
-/*   Updated: 2024/11/27 11:46:37 by mflury           ###   ########.fr       */
+/*   Updated: 2024/11/27 14:19:13 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Iter.hpp"
-
+#include <string>
 
 static void showInt(int &val) {
 	std::cout << "- " << val << std::endl;

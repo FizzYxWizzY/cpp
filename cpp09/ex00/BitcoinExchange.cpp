@@ -1,21 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Max.hpp                                            :+:      :+:    :+:   */
+/*   BitcoinExchange.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/27 04:45:34 by mflury            #+#    #+#             */
-/*   Updated: 2024/11/28 09:19:45 by mflury           ###   ########.fr       */
+/*   Created: 2024/11/28 17:35:58 by mflury            #+#    #+#             */
+/*   Updated: 2024/11/28 17:36:00 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef Max_HPP
-# define Max_HPP
-
-template <typename T>
-T const &max(T const &first, T const &second) {
-	return first > second ? first : second;
-}
-
-#endif
