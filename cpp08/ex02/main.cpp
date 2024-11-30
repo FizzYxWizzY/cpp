@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 02:53:26 by mflury            #+#    #+#             */
-/*   Updated: 2024/11/29 03:58:38 by mflury           ###   ########.fr       */
+/*   Updated: 2024/11/29 11:36:52 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 int main()
 {
 	{
-		std::cout << "-- TEST MUTANTSTACK --" << std::endl;
+		std::cout << "TEST MUTANTSTACK:" << std::endl;
 		MutantStack<int> mstack;
 		std::cout << "add 5 and 17" << std::endl;
 		mstack.push(5);
